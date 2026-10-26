@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Ulang Tahun ke-24 Nurfitriani Rahma</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff6f1;--bg2:#fbe4e6;--text:#4a1428;--muted:#8a5a68;--card:#ffffff;--line:#e9c3c9;
+  --accent:#b8405e;--accent2:#c99a52;--onaccent:#fff;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#2a0b18;--bg2:#3a1223;--text:#fbe9e6;--muted:#d0a5b0;--card:#3d1526;--line:#6b2a41;--accent:#e58aa1;--accent2:#e3c081;--onaccent:#2a0b18;}}
+:root[data-theme="dark"]{--bg:#2a0b18;--bg2:#3a1223;--text:#fbe9e6;--muted:#d0a5b0;--card:#3d1526;--line:#6b2a41;--accent:#e58aa1;--accent2:#e3c081;--onaccent:#2a0b18;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-size:19px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,p{margin:0}
+.script{font-family:"Great Vibes","Snell Roundhand",cursive;font-weight:400}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+
+/* petals */
+#petals{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.petal{position:absolute;top:-30px;width:14px;height:18px;background:var(--accent);opacity:.5;border-radius:80% 0 80% 0;animation:fall linear infinite}
+@keyframes fall{to{transform:translate3d(var(--dx),110vh,0) rotate(540deg)}}
+@media (prefers-reduced-motion:reduce){.petal{animation:none;display:none}}
+
+/* cover */
+#cover{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;
+  background:radial-gradient(circle at 50% 35%,#7a2342 0,#4a1428 55%,#2a0b18 100%);color:#fbe9e6;transition:opacity 1s ease,visibility 1s}
+#cover.gone{opacity:0;visibility:hidden}
+#cover .for{font-style:italic;font-size:20px;color:#e3c081}
+#cover h1{font-size:54px;line-height:1.05;margin:6px 0 4px;color:#fff}
+#cover .nm{font-size:22px;letter-spacing:.04em;margin-bottom:34px}
+.seal{width:112px;height:112px;border-radius:50%;border:0;background:radial-gradient(circle at 35% 30%,#e0607f,#9c2a49 70%);box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 0 0 5px rgba(255,255,255,.12);
+  display:grid;place-items:center;font-size:44px;animation:beat 1.6s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.1)}28%{transform:scale(1)}42%{transform:scale(1.08)}}
+@media (prefers-reduced-motion:reduce){.seal{animation:none}}
+#cover .hint{margin-top:18px;font-style:italic;color:#f0c9cf}
+
+main{position:relative;z-index:2;max-width:520px;margin:0 auto}
+section{padding:64px 26px;text-align:center}
+.alt{background:linear-gradient(var(--bg2),var(--bg))}
+h2{font-size:38px;font-style:italic;font-weight:600;color:var(--accent);margin-bottom:10px}
+.lead{color:var(--muted);margin-bottom:28px}
+.orn{display:block;margin:0 auto 18px;color:var(--accent2);letter-spacing:.5em;font-size:14px}
+
+/* hero */
+#hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding-top:40px;user-select:none}
+#hero .small{font-style:italic;font-size:22px;color:var(--muted)}
+.age{font-size:150px;line-height:.9;font-weight:600;color:var(--accent);margin:8px 0 0;text-shadow:0 6px 30px color-mix(in srgb,var(--accent) 35%,transparent)}
+.hbd{font-size:44px;color:var(--accent2);margin-top:-8px}
+.name{font-size:46px;margin-top:16px;line-height:1.15}
+.date{margin-top:14px;font-size:21px;letter-spacing:.06em}
+.tapme{margin-top:26px;font-size:16px;color:var(--muted);font-style:italic}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px;width:100%}
+.cd div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 2px}
+.cd b{display:block;font-size:30px;line-height:1;color:var(--accent);font-weight:600}
+.cd span{font-size:14px;color:var(--muted)}
+.fh{position:fixed;pointer-events:none;z-index:40;font-size:26px;animation:up 1.6s ease-out forwards}
+@keyframes up{to{transform:translate(var(--hx),-180px) scale(1.4);opacity:0}}
+
+.msg p{font-size:22px;font-style:italic}
+.msg p+p{margin-top:18px}
+.sign{margin-top:26px;font-size:40px;color:var(--accent)}
+
+/* agenda */
+.tl{position:relative;text-align:left;margin-top:30px;padding-left:34px}
+.tl:before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--accent2),var(--accent))}
+.ev{position:relative;margin-bottom:18px}
+.ev:before{content:"♥";position:absolute;left:-34px;top:14px;width:24px;height:24px;border-radius:50%;background:var(--bg);color:var(--accent);font-size:17px;text-align:center;line-height:24px}
+.ev button{width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+.ev h3{font-size:26px;font-weight:600;display:flex;justify-content:space-between;align-items:center}
+.ev h3 i{font-style:normal;color:var(--accent);transition:transform .3s}
+.ev[aria-expanded] {}
+.ev .more{max-height:0;overflow:hidden;transition:max-height .4s ease;color:var(--muted);font-size:18px}
+.ev.open .more{max-height:200px;padding-top:8px}
+.ev.open h3 i{transform:rotate(45deg)}
+.ev .tag{font-size:16px;color:var(--accent2);font-style:italic}
+
+/* venue */
+.venue{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 22px;margin-top:8px}
+.venue h3{font-size:34px;font-weight:600}
+.venue p{color:var(--muted)}
+.btn{display:inline-block;margin-top:20px;padding:14px 26px;border-radius:999px;border:0;background:var(--accent);color:var(--onaccent);font-size:19px;font-weight:600;text-decoration:none}
+.btn.ghost{background:transparent;border:1.5px solid var(--accent);color:var(--accent)}
+
+/* dresscode */
+.tabs{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:4px;margin:6px 0 24px;background:var(--card)}
+.tabs button{border:0;background:transparent;padding:8px 22px;border-radius:999px;font-size:18px}
+.tabs button[aria-pressed="true"]{background:var(--accent);color:var(--onaccent)}
+.sw{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.sw button{width:58px;height:58px;border-radius:50%;border:3px solid var(--card);box-shadow:0 0 0 1px var(--line),0 6px 14px rgba(0,0,0,.15);transition:transform .2s}
+.sw button[aria-pressed="true"]{transform:scale(1.18);box-shadow:0 0 0 2.5px var(--accent2),0 8px 18px rgba(0,0,0,.2)}
+.swname{margin-top:16px;font-size:26px;font-style:italic;font-weight:600;color:var(--accent);min-height:38px}
+.swtip{color:var(--muted);font-size:18px;min-height:56px}
+.ideas{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 20px;text-align:left;font-size:18px}
+.ideas h3{font-size:24px;text-align:center;color:var(--accent);font-style:italic;margin-bottom:8px}
+.ideas ul{margin:0;padding-left:20px}
+.ideas li{margin-bottom:4px}
+.avoid{margin-top:14px;font-size:16px;color:var(--muted);font-style:italic}
+
+/* rsvp */
+input{width:100%;padding:14px 18px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;text-align:center;margin-bottom:6px}
+.row{display:flex;flex-direction:column;gap:10px;align-items:center}
+footer{padding:48px 26px 70px;text-align:center;color:var(--muted)}
+footer .script{font-size:44px;color:var(--accent);display:block;margin-bottom:4px}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,40px);opacity:0;background:var(--accent);color:var(--onaccent);padding:12px 22px;border-radius:999px;z-index:60;transition:.3s;font-size:17px;max-width:90%;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+
+<div id="cover">
+  <p class="for">Sebuah undangan istimewa, khusus untuk</p>
+  <h1 class="script">Empit</h1>
+  <p class="nm">Nurfitriani Rahma</p>
+  <button class="seal" id="open" aria-label="Buka undangan">💌</button>
+  <p class="hint">Ketuk segel untuk membuka</p>
+</div>
+
+<div id="petals" aria-hidden="true"></div>
+
+<main>
+  <section id="hero">
+    <p class="small">Sayangku Empit, dengan penuh cinta aku mengundangmu</p>
+    <div class="age script">24</div>
+    <div class="hbd script">Happy Birthday</div>
+    <h1 class="name">Nurfitriani Rahma</h1>
+    <p class="date">Sabtu, 28 November 2026</p>
+    <div class="cd" aria-live="off">
+      <div><b id="d">0</b><span>hari</span></div>
+      <div><b id="h">0</b><span>jam</span></div>
+      <div><b id="m">0</b><span>menit</span></div>
+      <div><b id="s">0</b><span>detik</span></div>
+    </div>
+    <p class="tapme">Ketuk layar untuk menebar cinta ♥</p>
+  </section>
+
+  <section class="alt msg">
+    <span class="orn">✦ ✦ ✦</span>
+    <h2>Untuk Empit</h2>
+    <p>Dua puluh empat tahun yang lalu, dunia mendapat satu alasan baru untuk tersenyum. Dan aku beruntung menjadi salah satu yang ikut tersenyum karenamu.</p>
+    <p>Malam itu, aku ingin merayakanmu: tawamu, kebaikanmu, dan semua hal kecil yang membuat hari-hariku terasa hangat.</p>
+    <p>Datanglah, Empit. Biarkan aku membuat malam ini menjadi malam yang tak akan terlupa.</p>
+    <div class="sign script">with all my love ♥</div>
+  </section>
+
+  <section>
+    <span class="orn">✦</span>
+    <h2>Rangkaian Acara</h2>
+    <p class="lead">Ketuk tiap acara untuk melihat detailnya.</p>
+    <div class="tl">
+      <div class="ev"><button aria-expanded="false">
+        <h3>Photobooth <i>+</i></h3>
+        <span class="tag">Awal malam</span>
+        <div class="more"><p>Abadikan senyum terbaikmu bersamaku. Pilih props dan pose paling manis, lalu simpan fotonya sebagai kenangan kita.</p></div>
+      </button></div>
+      <div class="ev"><button aria-expanded="false">
+        <h3>Makan Malam <i>+</i></h3>
+        <span class="tag">Dinner romantis berdua</span>
+        <div class="more"><p>Menikmati hidangan istimewa di Matpeci Gourmet, ditemani obrolan hangat, tawa, dan tentu saja kejutan kecil untukmu.</p></div>
+      </button></div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <span class="orn">✦</span>
+    <h2>Tempat</h2>
+    <div class="venue">
+      <h3 class="script" style="font-size:46px;font-weight:400">Matpeci Gourmet</h3>
+      <p>Sukaseuri, Cikampek<br>Kabupaten Karawang, Jawa Barat</p>
+      <p style="margin-top:10px">Sabtu, 28 November 2026</p>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Matpeci+Gourmet+Sukaseuri+Cikampek">Buka di Google Maps</a>
+    </div>
+  </section>
+
+  <section>
+    <span class="orn">✦</span>
+    <h2>Dress Code</h2>
+    <p class="lead">Rose &amp; Champagne. Nuansa merah muda lembut, anggur, dan emas untuk malam yang romantis.</p>
+    <div class="tabs" role="group" aria-label="Pilih gaya">
+      <button aria-pressed="true" data-g="w">Untukmu</button>
+      <button aria-pressed="false" data-g="m">Untukku</button>
+    </div>
+    <div class="sw" id="sw"></div>
+    <p class="swname" id="swn"></p>
+    <p class="swtip" id="swt"></p>
+    <div class="ideas">
+      <h3 id="ih"></h3>
+      <ul id="il"></ul>
+    </div>
+    <p class="avoid">Sebaiknya hindari putih polos total dan hitam pekat dari ujung ke ujung, agar kita tampil serasi di foto malam ini.</p>
+  </section>
+
+  <section class="alt">
+    <span class="orn">✦</span>
+    <h2>Maukah Kamu Datang?</h2>
+    <p class="lead">Beri tahu aku jawabanmu lewat WhatsApp ya.</p>
+    <div class="row">
+      
+      <button class="btn" id="yes">Mau, aku datang ♥</button>
+      <button class="btn ghost" id="no">Pikir-pikir dulu ya</button>
+    </div>
+  </section>
+
+  <footer>
+    <span class="script">Empit</span>
+    Terima kasih sudah menjadi alasanku tersenyum.
+  </footer>
+</main>
+
+<div id="toast" role="status"></div>
+
+<script>
+(function(){
+  var WA_NUMBER = ""; // isi nomor WhatsApp kamu, contoh: 6281234567890
+  var $ = function(s){return document.querySelector(s)};
+  var $$ = function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+
+  // kelopak mawar
+  var pet = $("#petals");
+  for(var i=0;i<16;i++){
+    var p=document.createElement("i");p.className="petal";
+    p.style.left=Math.random()*100+"%";
+    p.style.setProperty("--dx",(Math.random()*120-60)+"px");
+    p.style.animationDuration=(9+Math.random()*9)+"s";
+    p.style.animationDelay=(-Math.random()*14)+"s";
+    p.style.opacity=.25+Math.random()*.4;
+    p.style.transform="scale("+(.6+Math.random()*.8)+")";
+    pet.appendChild(p);
+  }
+
+  // buka undangan
+  $("#open").addEventListener("click",function(){
+    $("#cover").classList.add("gone");
+    for(var i=0;i<12;i++)setTimeout(function(){burst(innerWidth/2+(Math.random()*160-80),innerHeight/2)},i*90);
+  });
+
+  // hati saat ketuk
+  function burst(x,y){
+    var h=document.createElement("div");h.className="fh";
+    h.textContent=["♥","💖","💕","🌹"][Math.floor(Math.random()*4)];
+    h.style.left=x-12+"px";h.style.top=y-12+"px";
+    h.style.setProperty("--hx",(Math.random()*80-40)+"px");
+    document.body.appendChild(h);setTimeout(function(){h.remove()},1700);
+  }
+  $("#hero").addEventListener("pointerdown",function(e){burst(e.clientX,e.clientY)});
+
+  // hitung mundur
+  var target=new Date(2026,10,28,0,0,0).getTime();
+  function tick(){
+    var t=target-Date.now();
+    if(t<=0){["d","h","m","s"].forEach(function(k){$("#"+k).textContent="0"});return}
+    $("#d").textContent=Math.floor(t/864e5);
+    $("#h").textContent=Math.floor(t%864e5/36e5);
+    $("#m").textContent=Math.floor(t%36e5/6e4);
+    $("#s").textContent=Math.floor(t%6e4/1e3);
+  }
+  tick();setInterval(tick,1000);
+
+  // agenda
+  $$(".ev").forEach(function(ev){
+    var b=ev.querySelector("button");
+    b.addEventListener("click",function(){
+      var o=ev.classList.toggle("open");b.setAttribute("aria-expanded",o);
+    });
+  });
+
+  // dress code
+  var colors=[
+    {n:"Blush Pink",c:"#f4c6cc",t:"Warna lembut yang manis dan feminin, cocok untuk suasana syahdu."},
+    {n:"Dusty Rose",c:"#d98b9b",t:"Merah muda berdebu yang elegan, warna utama malam ini."},
+    {n:"Burgundy",c:"#8b2a43",t:"Merah anggur yang dalam dan hangat, memberi kesan mewah."},
+    {n:"Champagne",c:"#e8d3a8",t:"Emas lembut yang berkilau halus di bawah cahaya lilin."},
+    {n:"Ivory",c:"#fff4e6",t:"Krem gading yang bersih sebagai penyeimbang warna-warna hangat."}
+  ];
+  var ideas={
+    w:{h:"Inspirasi outfit untukmu, Empit",l:["Dress midi atau maxi dalam warna dusty rose, burgundy, atau champagne","Set blouse satin dan rok plisket warna blush","Gamis atau dress modest dengan kerudung warna senada","Aksesori emas lembut, tas kecil, dan heels atau flat nyaman","Sentuhan bunga: bros mawar atau jepit rambut"]},
+    m:{h:"Inspirasi outfit untukku",l:["Kemeja warna blush, ivory, atau champagne dengan celana gelap","Kemeja burgundy dengan celana krem atau abu","Blazer burgundy atau navy di atas kaos/kemeja polos","Koko atau batik halus dengan nuansa rose dan emas","Sepatu pantofel atau sneakers bersih, jam tangan klasik"]}
+  };
+  var sel=1,g="w";
+  var sw=$("#sw");
+  colors.forEach(function(k,i){
+    var b=document.createElement("button");b.style.background=k.c;
+    b.setAttribute("aria-label",k.n);b.setAttribute("aria-pressed",i===sel);
+    b.addEventListener("click",function(){sel=i;paint()});
+    sw.appendChild(b);
+  });
+  function paint(){
+    $$("#sw button").forEach(function(b,i){b.setAttribute("aria-pressed",i===sel)});
+    $("#swn").textContent=colors[sel].n;$("#swt").textContent=colors[sel].t;
+    $("#ih").textContent=ideas[g].h;
+    $("#il").innerHTML=ideas[g].l.map(function(x){return "<li>"+x+"</li>"}).join("");
+  }
+  $$(".tabs button").forEach(function(b){
+    b.addEventListener("click",function(){
+      g=b.dataset.g;
+      $$(".tabs button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+      paint();
+    });
+  });
+  paint();
+
+  // RSVP
+  function toast(m){var t=$("#toast");t.textContent=m;t.classList.add("show");setTimeout(function(){t.classList.remove("show")},2600)}
+  function rsvp(yes){
+    
+    
+    var msg=yes
+      ?"Sayang, aku mau datang ke dinner ulang tahunku, Sabtu 28 November 2026 di Matpeci Gourmet. Aku tunggu ya! ♥"
+      :"Sayang, makasih undangannya ♥ Aku pikir-pikir dulu ya, nanti aku kabari.";
+    var url="https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(msg);
+    window.open(url,"_blank","noopener");
+    toast(yes?"Yeay, sampai jumpa malam itu, sayang ♥":"Oke, aku tunggu jawabanmu ♥");
+  }
+  $("#yes").addEventListener("click",function(){rsvp(true)});
+  $("#no").addEventListener("click",function(){rsvp(false)});
+})();
+</script>
+</body>
+</html>
